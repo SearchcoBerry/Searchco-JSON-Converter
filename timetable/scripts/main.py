@@ -44,7 +44,7 @@ def output_json(import_path, export_path, min_col, max_col, min_row):
 
     # JSONファイルに書き込みます
     with open(export_path, 'w', encoding='utf-8') as outfile:
-        json.dump(timetables, outfile, ensure_ascii=False)
+        json.dump(timetables, outfile, ensure_ascii=False, indent=2)
 
 def main():
     option = argparse.ArgumentParser(description='スクリプトのオプション')
