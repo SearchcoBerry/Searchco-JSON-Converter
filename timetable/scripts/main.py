@@ -3,7 +3,6 @@ import argparse
 import openpyxl
 import json
 import string
-from collections import OrderedDict
 
 
 def alphabet_to_number(column):
@@ -43,7 +42,6 @@ def output_json(import_path, export_path, min_col, max_col, min_row):
 
         timetables.append(timetable_dict)
 
-        # print(timetable_dict)
     # JSONファイルに書き込みます
     with open(export_path, 'w', encoding='utf-8') as outfile:
         json.dump(timetables, outfile, ensure_ascii=False)
