@@ -26,8 +26,6 @@ def convert_json(import_path, export_path, config_path):
 
     json_list = []
     first_counter = True
-    # tqdm(sheet.iter_rows(), total=len(len(sheet.iter_rows())))
-    # sheet.iter_rows()
     print(sheet.max_row, sheet.max_column)
     sheet_len = sheet.max_row
     for row in tqdm(sheet.iter_rows(), total=sheet_len):
